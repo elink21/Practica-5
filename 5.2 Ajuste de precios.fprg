@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Elink"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2016-09-08 06:33:48 p. m."/>
+        <attribute name="created" value="RWxpbms7IEVMSUFTOyAyMDE2LTA5LTA3OyAxMDowMjo1MiBhLiBtLjsgMjQxMw=="/>
+        <attribute name="edited" value="RWxpbms7IEVMSUFTOyAyMDE2LTA5LTA4OyAwNjozMzo0OCBwLiBtLjsgMjQ0Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Programa para calcular el descuento y el importe total de los productos ingresados&#13;&#10;&#13;&#10;Elias Edgardo Segundo Antonio &#13;&#10;ICO 21 2016B "/>
+            <declare name="suma" type="Real" array="False" size="" variables="suma"/>
+            <assign variable="suma" expression="0"/>
+            <declare name="descuento" type="Real" array="False" size="" variables="descuento"/>
+            <assign variable="descuento" expression="0"/>
+            <declare name="articulos" type="Integer" array="False" size="" variables="articulos"/>
+            <declare name="precio" type="Real" array="False" size="" variables="precio"/>
+            <assign variable="articulos" expression="0"/>
+            <assign variable="precio" expression="1"/>
+            <while expression="articulos&lt;1 || precio!=0">
+                <output expression="&quot;Inserte el precio del producto (0) para terminar&quot;"/>
+                <input variable="precio"/>
+                <if expression="(precio==0 &amp;&amp; articulos==0) || precio&lt;0">
+                    <then>
+                        <output expression="&quot;No se ha ingresado ningun valor aun&quot;"/>
+                    </then>
+                    <else>
+                        <assign variable="articulos" expression="articulos+1"/>
+                        <if expression="precio&lt;=1000">
+                            <then>
+                                <assign variable="suma" expression="suma+precio"/>
+                            </then>
+                            <else>
+                                <if expression="precio&lt;=1500">
+                                    <then>
+                                        <assign variable="suma" expression="suma+precio-(precio*0.1)"/>
+                                        <assign variable="descuento" expression="descuento+(precio*0.1)"/>
+                                    </then>
+                                    <else>
+                                        <assign variable="suma" expression="suma+precio-(precio*0.2)"/>
+                                        <assign variable="descuento" expression="descuento+(precio*0.2)"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;El total es &quot;&amp; suma&amp; &quot;$, sin descuento es &quot;&amp;suma+descuento&amp;&#13;&#10;&quot;$, se compraron &quot;&amp;articulos-1&amp;&quot; productos y se descont&#243; &quot;&amp;descuento&amp; &quot;$ del total&quot;"/>
+        </body>
+    </function>
+</flowgorithm>

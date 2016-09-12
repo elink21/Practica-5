@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Elink"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2016-09-08 06:29:59 p. m."/>
+        <attribute name="created" value="RWxpbms7IEVMSUFTOyAyMDE2LTA5LTA3OyAxMDoyMjo1OCBhLiBtLjsgMjQyMQ=="/>
+        <attribute name="edited" value="RWxpbms7IEVMSUFTOyAyMDE2LTA5LTA4OyAwNjoyOTo1OSBwLiBtLjsgMjQ1MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Programa para calcular el numero^exponente dados n y exp &#13;&#10;&#13;&#10;Elias Edgardo Segundo Antonio &#13;&#10;ICO 21 2016B "/>
+            <declare name="n" type="Integer" array="False" size="" variables="n"/>
+            <declare name="i" type="Integer" array="False" size="" variables="i"/>
+            <declare name="pow" type="Integer" array="False" size="" variables="pow"/>
+            <declare name="exp" type="Integer" array="False" size="" variables="exp"/>
+            <output expression="&quot;Ingrese el numero&quot;"/>
+            <input variable="n"/>
+            <output expression="&quot;Ingrese el exponente&quot;"/>
+            <input variable="exp"/>
+            <assign variable="pow" expression="1"/>
+            <for variable="i" start="1" end="exp" direction="inc" step="1">
+                <assign variable="pow" expression="pow*n"/>
+                <output expression="pow"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

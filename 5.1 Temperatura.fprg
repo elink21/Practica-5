@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Elink"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2016-09-08 06:28:11 p. m."/>
+        <attribute name="created" value="RWxpbms7IEVMSUFTOyAyMDE2LTA5LTA3OyAwODozNzo1NSBhLiBtLjsgMjQzMQ=="/>
+        <attribute name="edited" value="RWxpbms7IEVMSUFTOyAyMDE2LTA5LTA4OyAwNjoyODoxMSBwLiBtLjsgMjQzNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Programa para aconsejar la actividad a realizar de acuerdo a la temperatura ambiental&#13;&#10;&#13;&#10;Elias Edgardo Segundo Antonio &#13;&#10;ICO 21 2016B "/>
+            <declare name="temp" type="Integer" array="False" size="" variables="temp"/>
+            <assign variable="temp" expression="0"/>
+            <while expression="temp!=-273">
+                <output expression="&quot;Introduzca la temperatura o introduzca -273 para terminar&quot;"/>
+                <input variable="temp"/>
+                <if expression="temp&lt;5">
+                    <then>
+                        <if expression="temp==-273">
+                            <then>
+                                <output expression="&quot;Fin del programa&quot;"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Lectura&quot;"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <if expression="temp&lt;=12">
+                            <then>
+                                <output expression="&quot;Caminadora&quot;"/>
+                            </then>
+                            <else>
+                                <if expression="temp&lt;20">
+                                    <then>
+                                        <output expression="&quot;Caminata&quot;"/>
+                                    </then>
+                                    <else>
+                                        <if expression="temp&lt;=27">
+                                            <then>
+                                                <output expression="&quot;Trotar&quot;"/>
+                                            </then>
+                                            <else>
+                                                <if expression="temp&lt;30">
+                                                    <then>
+                                                        <output expression="&quot;Futbol&quot;"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="30&lt;=temp">
+                                                            <then>
+                                                                <output expression="&quot;Natacion&quot;"/>
+                                                            </then>
+                                                            <else/>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
